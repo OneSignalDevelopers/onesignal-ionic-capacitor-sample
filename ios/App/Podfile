@@ -1,6 +1,6 @@
 require_relative '../../node_modules/@capacitor/ios/scripts/pods_helpers'
 
-platform :ios, '13.0'
+platform :ios, '16.0'
 use_frameworks!
 
 # workaround to avoid Xcode caching of Pods that requires
@@ -21,6 +21,13 @@ end
 target 'App' do
   capacitor_pods
   # Add your Pods here
+  pod 'OneSignalXCFramework', '>= 3.0.0', '< 4.0'
+
+    target 'OneSignalNotificationServiceExtension' do
+      # Comment the next line if you don't want to use dynamic frameworks
+      use_frameworks!
+      pod 'OneSignalXCFramework', '>= 3.0.0', '< 4.0'
+    end
 end
 
 post_install do |installer|

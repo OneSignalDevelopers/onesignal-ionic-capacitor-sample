@@ -1,7 +1,5 @@
 {
-  "name": "Ionic and Flutter",
-  "integrations": {
-    "capacitor": {}
-  },
+  "name": "New Ionic App",
+  "integrations": {},
   "type": "react"
 }
